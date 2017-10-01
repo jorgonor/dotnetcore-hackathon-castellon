@@ -1,0 +1,10 @@
+@model examples_dotnet_core.Controllers.IoCController.JokeViewModel
+
+@{
+    ViewData["Title"] = "IoC Demo";
+}
+
+<div class="jumbotron">
+    <img class="img-responsive chuck" src="/images/chuck-norris.jpg" style="max-height: 40%" />
+    <h2>@Html.Raw(Model.Message)</h2>
+</div>
