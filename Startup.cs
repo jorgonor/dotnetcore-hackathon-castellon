@@ -48,14 +48,13 @@ namespace examples_dotnet_core
             });
 
             services.AddScoped<IEmailSender, EmailSender>();
-            services.AddSingleton<IJokeProvider, ChuckNorrisJokeProvider>();
+            //services.AddSingleton<IJokeProvider, ChuckNorrisJokeProvider>();
             
-            
-            /* services.AddSingleton<IJokeProvider>(
+            services.AddSingleton<IJokeProvider>(
                 serviceProvider => {
                     return new BufferedJokeProvider(new ChuckNorrisJokeProvider(), 3);
                 }
-            ); */
+            );
             /*
             services.AddTransient<IJokeProvider, ChuckNorrisJokeProvider>();
             services.AddScoped<IJokeProvider, ChuckNorrisJokeProvider>();  
